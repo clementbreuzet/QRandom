@@ -1,29 +1,30 @@
 ﻿namespace Quantum.QRandom.Quantum {
 
+    open Microsoft.Quantum.Convert;
+    open Microsoft.Quantum.Math;
+    open Microsoft.Quantum.Measurement;
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
     
+    operation SampleRandomNumber(max: Int) : Int {
+        return SampleRandomNumberInRange(max);
+    }
 
-    operation GenerateByte() : Result[]{
-		mutable results = new Result[8];
-        using(q0 = Qubit()){
-            for(index in 0..7){
-			    Set(q0, Zero);
-                set results w/= index <- GetSuperpositionResult(q0);
-                Reset(q0);
-		    }
-		}
-        return results;
-	}
-	
-    operation GetSuperpositionResult(qubit: Qubit) : Result{
-		H(qubit);
-        return M(qubit);
-	}
-
-    operation Set(qubit : Qubit, desiredResult: Result) : Unit {
-        if (desiredResult != M(qubit)) {
-            X(qubit);
+    operation SampleQuantumRandomNumberGenerator() : Result {
+        borrowing (q = Qubit())  { 
+            H(q);               
+            return MResetZ(q);  
         }
+    }
+
+    operation SampleRandomNumberInRange(max : Int) : Int {
+        mutable bits = new Result[0];
+        for (idxBit in 1..BitSizeI(max)) {
+            set bits += [SampleQuantumRandomNumberGenerator()];
+        }
+        let sample = ResultArrayAsInt(bits);
+        return sample > max
+               ? SampleRandomNumberInRange(max)
+               | sample;
     }
 }
