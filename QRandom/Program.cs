@@ -9,15 +9,18 @@ namespace QRandom
     {
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Press enter to generate a number, esc to exit!");
-            while (Console.ReadKey().Key != ConsoleKey.Escape)
+            Console.WriteLine("Welcome to QRandom, please enter a range value");
+            var range = Console.ReadLine();
+
+            // On initialise un simulateur quantique dans un bloc using
+            using (var qsim = new QuantumSimulator())
             {
-                using (var qsim = new QuantumSimulator())
-                {
-                    var number = await SampleRandomNumber.Run(qsim, 100);
-                    Console.WriteLine(number);
-                }
-                Console.WriteLine("Press enter to generate a number, esc to exit!");
+                // On execute l'opération avec retour Int en asynchrone avec les paramètres demandés
+                var result = await SampleRandomNumberWithReturn.Run(qsim, Convert.ToInt64(range));
+                Console.WriteLine($"random value: {result}");
+
+                //On execute l'opération en asynchrone avec les paramètres demandés
+                //await SampleRandomNumber.Run(qsim, Convert.ToInt64(range));
             }
         }
     }

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRandom", "QRandom\QRandom.csproj", "{14032CAF-EB6E-439E-8396-BEB33226F3CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRandom", "QRandom\QRandom.csproj", "{14032CAF-EB6E-439E-8396-BEB33226F3CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRandom.Quantum", "QRandom.Quantum\QRandom.Quantum.csproj", "{1CF33B3A-D4DD-4361-AEDB-269682A1FED0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRandom.Quantum", "QRandom.Quantum\QRandom.Quantum.csproj", "{1CF33B3A-D4DD-4361-AEDB-269682A1FED0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
