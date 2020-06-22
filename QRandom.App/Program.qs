@@ -6,7 +6,7 @@
     open Microsoft.Quantum.Canon;
     open Microsoft.Quantum.Intrinsic;
 
-    
+    // Pour lancer cette opération: ProjectFolder\dotnet run --max {value}
     @EntryPoint()
     operation SampleRandomNumber(max: Int) : Unit {
         let result = SampleRandomNumberInRange(max);

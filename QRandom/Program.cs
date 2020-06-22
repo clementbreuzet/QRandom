@@ -19,7 +19,7 @@ namespace QRandom
                 var result = await SampleRandomNumberWithReturn.Run(qsim, Convert.ToInt64(range));
                 Console.WriteLine($"random value: {result}");
 
-                //On execute l'opération en asynchrone avec les paramètres demandés
+                // On execute l'opération en asynchrone avec les paramètres demandés
                 //await SampleRandomNumber.Run(qsim, Convert.ToInt64(range));
             }
         }
