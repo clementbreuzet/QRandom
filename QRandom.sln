@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRandom", "QRandom\QRandom.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRandom.Quantum", "QRandom.Quantum\QRandom.Quantum.csproj", "{1CF33B3A-D4DD-4361-AEDB-269682A1FED0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRandom.App", "QRandom.App\QRandom.App.csproj", "{7B0DA7CB-F281-4FF8-9313-B49563371856}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1CF33B3A-D4DD-4361-AEDB-269682A1FED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CF33B3A-D4DD-4361-AEDB-269682A1FED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1CF33B3A-D4DD-4361-AEDB-269682A1FED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B0DA7CB-F281-4FF8-9313-B49563371856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B0DA7CB-F281-4FF8-9313-B49563371856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B0DA7CB-F281-4FF8-9313-B49563371856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B0DA7CB-F281-4FF8-9313-B49563371856}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
